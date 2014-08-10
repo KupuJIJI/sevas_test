@@ -1,2 +1,4 @@
-%h1 Website#invite
-%p Find me in app/views/website/invite.html.haml
+%h1 Invite User
+=form_for @code, :url => { :action => :invite } do |f|
+  =f.text_field(:email)
+  =f.submit("SEND")

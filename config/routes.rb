@@ -5,6 +5,12 @@ Rails.application.routes.draw do
 
   get 'website/invite'
 
+  resources :codes
+
+  post 'website/invite'
+
+
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
