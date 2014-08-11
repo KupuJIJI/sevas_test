@@ -1,5 +1,8 @@
 class WebsiteController < ApplicationController
+
   def index
+    @error = 'Set up phone in your profile' if current_admin_user.phone == ''
+    
   end
 
   def registration
@@ -14,9 +17,18 @@ class WebsiteController < ApplicationController
   end
 
   def profile
+    @error = 'Set up phone in your profile' if current_admin_user.phone == ''
+    if params[:admin_user]
+      puts @user = AdminUser.find(params[:admin_user][:id])
+      @user.update_attributes(admin_user_params)
+      redirect_to root_path
+    else
+      @user = current_admin_user
+    end
   end
 
   def invite
+    @access = false unless  current_admin_user.role == 1
     @code =  Code.new
     puts params[:code]
     if params[:code] && Code.create(email: params[:code][:email])
@@ -27,6 +39,6 @@ class WebsiteController < ApplicationController
 
   private
   def admin_user_params
-    params.require(:admin_user).permit(:email, :password, :password_confirmation)
+    params.require(:admin_user).permit(:email, :password, :password_confirmation, :phone)
   end  
 end

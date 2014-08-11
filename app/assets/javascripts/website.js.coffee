@@ -6,7 +6,7 @@
 $(document).on "ready page:load", ->
   $('input[type="submit"]').on "click", ->
     validation = true
-    if $('input[min_length]').val().length < $('input[min_length]').attr('min_length')
+    if $('input[min_length]')[0] && $('input[min_length]').val().length < $('input[min_length]').attr('min_length')
       validation = false
       alert "Passwords length must be 8 or more symbols"
     else

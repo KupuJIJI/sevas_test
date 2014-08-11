@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   post 'website/invite'
   post 'website/registration'
+  patch 'website/profile'
 
 
 

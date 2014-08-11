@@ -1,1 +1,7 @@
 %h1 PROFILE
+=form_for @user , :url => { :action => :profile } do |f|
+  =f.text_field(:email,required: '', type: 'email')
+  =f.text_field(:phone)
+  =f.text_field(:id, hidden: true)
+
+  =f.submit("SEND")

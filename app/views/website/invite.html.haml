@@ -1,4 +1,7 @@
-%h1 Invite User
-=form_for @code, :url => { :action => :invite } do |f|
-  =f.text_field(:email, required: '')
-  =f.submit("SEND")
+-if @access
+  %h1 Invite User
+  =form_for @code, :url => { :action => :invite } do |f|
+    =f.text_field(:email, required: '')
+    =f.submit("SEND")
+-else
+  %h1 You have not permissons
