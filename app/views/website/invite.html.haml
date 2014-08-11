@@ -1,4 +1,4 @@
 %h1 Invite User
 =form_for @code, :url => { :action => :invite } do |f|
-  =f.text_field(:email)
+  =f.text_field(:email, required: '')
   =f.submit("SEND")

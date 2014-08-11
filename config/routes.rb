@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   get 'website/index'
-
   get 'website/registration'
-
   get 'website/invite'
+  get 'website/profile'
 
   resources :codes
 
   post 'website/invite'
+  post 'website/registration'
 
 
 

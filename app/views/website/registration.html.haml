@@ -1,2 +1,10 @@
-%h1 Website#registration
-%p Find me in app/views/website/registration.html.haml
+-if @access
+  %h1 Registration form
+  =form_for @user , :url => { :action => :registration } do |f|
+    =f.text_field(:email,required: '', type: 'email')
+    =f.text_field(:password, required: '', min_length: '8', type: 'password')
+    =f.text_field(:password_confirmation, required: '', match: '#admin_user_password', min_length: '8', type: 'password')
+    =f.text_field(:code_id, value: @code.first.id, hidden: true)
+    =f.submit("SEND")
+-else
+  You need get invite for registration

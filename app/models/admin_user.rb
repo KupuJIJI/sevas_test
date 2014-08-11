@@ -26,6 +26,7 @@ class AdminUser
   field :phone,    type: String, default: ''
   field :role,     type: Integer, default: 0
 
+
   ## Confirmable
   # field :confirmation_token,   type: String
   # field :confirmed_at,         type: Time
