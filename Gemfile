@@ -27,15 +27,15 @@ gem 'devise',                github: 'plataformatec/devise',     branch: 'lm-rai
 gem 'activeadmin',           github: 'gregbell/active_admin'
 gem 'activeadmin-mongoid',   github: 'elia/activeadmin-mongoid', branch: "rails4"
 gem 'mongoid',               github: 'mongoid/mongoid'
-gem 'mongoid_slug',          github: 'nofxx/mongoid-slug',       ref:    'f774319'
-gem 'best_in_place',         github: 'bernat/best_in_place',     branch: 'rails-4'
-gem 'carrierwave-mongoid',   require: 'carrierwave/mongoid'
-gem 'rmagick'
-gem 'mini_magick'
-gem 'mongoid_taggable'
-gem 'mongoid_orderable'
-gem 'activeadmin-sortable' 
-gem 'redactor-rails'
+# gem 'mongoid_slug',          github: 'nofxx/mongoid-slug',       ref:    'f774319'
+# gem 'best_in_place',         github: 'bernat/best_in_place',     branch: 'rails-4'
+# gem 'carrierwave-mongoid',   require: 'carrierwave/mongoid'
+# gem 'rmagick'
+# gem 'mini_magick'
+# gem 'mongoid_taggable'
+# gem 'mongoid_orderable'
+# gem 'activeadmin-sortable' 
+# gem 'redactor-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 
@@ -45,3 +45,5 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl'
 end
+
+gem 'rails_12factor', group: :production
