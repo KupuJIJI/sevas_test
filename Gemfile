@@ -38,3 +38,10 @@ gem 'activeadmin-sortable'
 gem 'redactor-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
+
+
+group :test do 
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'factory_girl'
+end

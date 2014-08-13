@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'website/index'
+  # get 'website/index'
   get 'website/registration'
   get 'website/invite'
   get 'website/profile'
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'website#index'
+  root 'website#profile'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
